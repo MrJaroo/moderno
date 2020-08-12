@@ -49,10 +49,10 @@ body {
 
 .title {
    margin-bottom: 30px;
+   @include f700;
    font-size: 36px;
    text-align: center;
    line-height: 60px;
-   font-weight: 700;
    color: $bg;
 }
 

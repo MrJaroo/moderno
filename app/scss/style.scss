@@ -77,14 +77,14 @@
   color: #fff;
   &-title {
     margin-bottom: 10px;
+    @include f700;
     font-size: 48px;
-    font-weight: 700;
     line-height: 72px;
   }
   &-text {
     margin-bottom: 50px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
     line-height: 30px;
   }
   &-form {
@@ -98,14 +98,14 @@
       padding-left: 25px;
       padding-right: 60px;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       border-radius: 4px;
       border: transparent;
       box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
       outline: transparent;
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
     button {
@@ -177,7 +177,7 @@
     align-items: center;
     min-height: 90px;
     padding: 10px 30px;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
 
@@ -227,7 +227,7 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
     }
   }
 
@@ -286,3 +286,66 @@
 }
 
 // end product-slider=========================================
+
+// advantages start====================================================================================================================================
+
+.advantages {
+  padding: 110px 0;
+  background-color: $bg;
+  &__title {
+    color: #fff;
+  }
+}
+
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  max-width: 370px;
+  padding: 0px 15px;
+  text-align: center;
+  &:hover {
+    .advantages__item-images {
+      background-color: $green;
+      svg {
+        g {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+    .advantages__item-title {
+      color: $green;
+    }
+  }
+  &-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    width: 144px;
+    height: 144px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.5s;
+    svg {
+      width: 90px;
+      height: 80px;
+    }
+  }
+  &-title {
+    margin-bottom: 25px;
+    @include f500;
+    font-size: 24px;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  &-text {
+    font-size: 15px;
+  }
+}
+
+// advantages end======================================================================================================================================
